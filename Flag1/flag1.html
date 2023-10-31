@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Username recovery</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="form">
+			<div class="label">
+				<h3 id="h3">Enter secure code for username recovery <h3>
+			</div>
+			<div class="inputDiv">
+				<form name="pinForm" action="" method="get" id="pinForm">
+					<input
+					type=password
+					name="pin"
+					id="pin"
+					pattern="[0-9]{6}"
+					inputmode="numeric"
+					placeholder="Enter security code"
+					required=""
+					> 
+					</input>
+					<input
+					type="submit"
+					value="Enter"
+					>
+					</input>
+				</form>
+			</div>
+			<p id="answer"></p>
+		</div>
+		<script src="index.js"></script>		
+	</body>
+</html>
+
