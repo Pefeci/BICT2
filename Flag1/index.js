@@ -25,8 +25,10 @@ const MD5 = (d) => {
     return r.toLowerCase()
 };
 
+const url="http://192.168.56.102";
+
 async function verifyQuery(pin) {
-    const data = await fetch("http://127.0.0.1:5000/verify/" + pin)
+    const data = await fetch(url + ":5000/verify/" + pin)
     .then((response) => response.json())
     .then((data) => {
         document.getElementById("answer").innerHTML = "Your username: " + data.username;

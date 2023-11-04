@@ -1,7 +1,8 @@
+url = "http://192.168.56.102"
 
 async function authenticate(username, password){
         // Send a POST request to the backend for authentication
-        fetch("http://127.0.0.1:5000/authenticate", {
+        await fetch(url + ":5000/authenticate", {
             method: "POST",
             body: JSON.stringify({ username, password }),
             headers: {
@@ -12,7 +13,7 @@ async function authenticate(username, password){
         .then(data => {
             if (data.success) {
                 // Authentication successful, redirect to a new page
-                window.location.href = "http://127.0.0.1:5500/" + data.url;
+                window.location.href = url + ":80/" + data.url;
             } else {
                 // Authentication failed, display an error message
                 document.getElementById("message").textContent = "Authentication failed. Please try again.";
